@@ -1,7 +1,7 @@
 <template>
     <div id="root">
         <div style="background: silver;">
-            <p class="welcome">Bienvenue</p> 
+            <p class="welcome" >Bienvenue</p> 
         </div>
         <div class="container">
             <p class="allTxt">Mon coup de coeur du moment</p>
@@ -131,6 +131,8 @@ export default {
 
 .welcome {
     max-width: 1280px;
+    margin-top: 36px;
+    margin-bottom: 24px;
     margin-right: auto;
     margin-left: auto;
     background: white;

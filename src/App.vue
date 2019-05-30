@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header></Header>
-    </router-view>
+    <MyHeader/>
+    <router-view/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import Header from "./components/header.vue";
 export default {
   name: 'app',
   components: {
-    Header
+    MyHeader: Header
   }
 }
 </script>
