@@ -1,10 +1,8 @@
 <template>
-    <div>
-        <footer>
-           <span class="allTxt">Contact</span> 
-           <span class="allTxt">About us</span> 
-        </footer>
-    </div>
+    <footer>
+        <span class="allTxt">Contact</span> 
+        <span class="allTxt">About us</span> 
+    </footer>
 </template>
 
 <script>

@@ -1,11 +1,11 @@
 <template>
 <div>
       <header>
-      <span class="title">Domos.</span>
+      <router-link to="/" style="text-decoration: none;" class="title">Domos.</router-link>
       <div>
-        <span class="allTxt headerContent">Nos appartements.</span>
-        <span class="allTxt headerContent">Mes coups de Coeur.</span>
-        <span class="allTxt headerContent">Me contacter.</span>
+        <span class="allTxt headerContent">Our flats.</span>
+        <span class="allTxt headerContent">My crushes in Paris.</span>
+        <span class="allTxt headerContent">Contact.</span>
       </div>
       <div class="containerDeco">
         <div class="headerDeco" style="width: 20px; height: 20px;"></div>

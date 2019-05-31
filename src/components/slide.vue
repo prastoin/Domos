@@ -1,27 +1,41 @@
 <template>
-    <div >
+    <div>
         <transition-group 
         name="slide-fade"
         tag="div"
         class="root"
         >
-        <div 
-        v-for="i in 3"
-        :key="i"
+        <router-link
+        :to="{ name: 'flat' }"
+        v-for="(name, index) in names"
+        :key="name"
         class="container">
             <div id="txtContainer">
-                <span>AtHome.</span>
+                <span>{{name}}</span>
             </div>
             <div id="flou"></div>
-            <div id="photo"></div>
-        </div>
+            <img
+            id="photo"
+            :src="images[index]"
+            >
+        </router-link>
         </transition-group>
     </div>
 </template>
 
 <script>
+const names = ['Athos', 'AtHome', 'Domos'];
+const images = ["https://www.parisianhome.com/media/photos/97476.jpg", "https://www.parisianhome.com/media/photos/97479.jpg", "https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg"];
+
 export default {
-    name: "slide"
+    name: "slide",
+    data () {
+        return {
+            images,
+            names
+        }
+
+    }
 }
 </script>
 
@@ -50,6 +64,7 @@ export default {
         height: 100%;
         opacity: 0.8;
         z-index: 3;
+
         background: black;
         transition: 0.5s all ease-in;
         span {
@@ -77,7 +92,7 @@ export default {
         z-index: 1;
         width: 100%;
         height: 100%;
-        background-image: url('https://picsum.photos/400/250')
+        object-fit: cover;
     }
 }
 
