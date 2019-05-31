@@ -2,16 +2,20 @@
   <div id="app">
     <MyHeader/>
     <router-view/>
+    <myfooter/>
   </div>
 </template>
 
 <script>
-import Header from "./components/header.vue";
+import MyHeader from "./components/header.vue";
+import Myfooter from "./components/footer.vue";
+
 
 export default {
   name: 'app',
   components: {
-    MyHeader: Header
+    MyHeader,
+    Myfooter
   }
 }
 </script>
@@ -22,7 +26,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  min-height: 100vh;
   color: #2c3e50;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav
@@ -43,7 +51,6 @@ export default {
 }
 
 body {
-  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

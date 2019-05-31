@@ -19,8 +19,8 @@
                     :key="i"
                     v-show="i === index"/>
                 </transition-group>
-                <span @click="slideRight" class="button right">&gt;</span>
-                <span @click="slideLeft" class="button left">&lt;</span>
+                <div @click="slideRight" class="button right">&gt;</div>
+                <div @click="slideLeft" class="button left">&lt;</div>
                 <div class="navBar">
                     <button
                     :class="{active: n === index}"
@@ -31,10 +31,13 @@
                 </div>
             </div>
         </div>
+        <slide/>
     </div>
 </template>
 
 <script>
+
+import slide from "./slide.vue"
 
 const images= [
     'https://picsum.photos/1480/600',
@@ -44,6 +47,9 @@ const images= [
 
 export default {
     name: "home",
+    components: {
+        slide
+    },
     data () {
         return {
             index: 0,
@@ -148,26 +154,27 @@ img {
 }
 
 .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 5%;
+    height: 100%;
     font-size: 1rem;
-    border-radius: 5px;
     position: absolute;
-    padding: 6px 12px;;
     background: silver;
     opacity: 0;
     tranition: all 0.5s ease;
-    border: 1px solid white;
 }
 
 .left {
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
+    left: 0;
+    -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,1))); 
 }
 
 .right {
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
+    right: 0;
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,1))); 
 }
 
 .r-slide-enter-active {
