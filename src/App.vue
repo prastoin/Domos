@@ -10,7 +10,6 @@
 import MyHeader from "./components/header.vue";
 import Myfooter from "./components/footer.vue";
 
-
 export default {
   name: 'app',
   components: {
