@@ -6,8 +6,8 @@
         class="root"
         >
         <router-link
-        :to="{ name: 'flat' }"
         v-for="(name, index) in names"
+        :to="'flat/' + name"
         :key="name"
         class="container">
             <div id="txtContainer">

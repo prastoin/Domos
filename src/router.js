@@ -15,8 +15,9 @@ export default new Router({
       component: Home
     },
     {
-      path: "/flat",
+      path: "/flat/:flat_name",
       name: "flat",
+      props: true,
       component: flat
     }
    /*{

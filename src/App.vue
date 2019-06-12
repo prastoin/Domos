@@ -7,7 +7,15 @@
 </template>
 
 <script>
-import MyHeader from "./components/header.vue";
+    Vue.use(Lightbox)
+
+    new Vue({
+        // ...
+    })
+</script>
+
+<script>
+import MyHeader from "./components/myHeader.vue";
 import Myfooter from "./components/footer.vue";
 
 export default {
