@@ -84,10 +84,10 @@ const imgs = {
         {
             name: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
             id: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+
         }
     ]
 }
-
 export default {
     name: "flat",
     props: [
