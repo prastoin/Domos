@@ -1,22 +1,10 @@
 <template>
     <div id="root">
         <div class="container">
-           <div class="lightBoxContainer">
-             <img 
-                v-for="(image, n) in imgs[flat_name]"
-                :key="n"
-                :src="image.name" 
-                :alt="flat_name">
+            <div class="lightBoxContainer">
+               <lightbox :images="imgs[flat_name]" :toDisplay="4"/>
             </div>
-            <!-- <lightbox id="mylightbox"
-                ref="lightbox"
-                :images="imgs[flat_name]"
-                :filter="galleryFilter"
-                :directory="thumbnailDir"
-                :timeoutDuration="5000"
-                @click="showLightbox(imgs[flat_name].name)"
-            ></lightbox> -->
-            <div class="description">
+           <div class="description">
                 <p class="allTxt">Il ya tant de chambres<br>
                     les animaux sont interdits<br>
                     Espace non fumeur<br>
@@ -32,62 +20,65 @@
 </template>
 
 <script>
+import lightbox from "../components/lightbox.vue";
+
 const imgs = {
     'Athos': [
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/675/447',
+            poids: 'https://picsum.photos/675/447'
         },
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/674/447',
+            poids: 'https://picsum.photos/674/447'
         },
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/673/447',
+            poids: 'https://picsum.photos/673/447'
         },
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/672/447',
+            poids: 'https://picsum.photos/672/447'
         }
     ],
-    'Athome': [
-        {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+    'AtHome': [
+         {
+            src: 'https://picsum.photos/675/447',
+            poids: 'https://picsum.photos/675/447'
         },
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/674/447',
+            poids: 'https://picsum.photos/674/447'
         },
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/673/447',
+            poids: 'https://picsum.photos/673/447'
         },
         {
-            name: 'https://picsum.photos/675/447',
-            id: 'https://picsum.photos/675/447'
+            src: 'https://picsum.photos/672/447',
+            poids: 'https://picsum.photos/672/447'
         }
     ],
     'Domos': [
         {
-            name: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            id: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
+            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
         },
         {
-            name: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            id: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
+            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
         },           {
-            name: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            id: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
+            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
         },
         {
-            name: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            id: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
+            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
 
         }
     ]
 }
+
 export default {
     name: "flat",
     props: [
@@ -97,6 +88,9 @@ export default {
         return {
         imgs
         }
+    },
+    components: {
+        lightbox
     }
 }
 </script>
@@ -118,7 +112,7 @@ export default {
     justify-content: space-between;
     flex-direction: column;
     width: 100vw;
-    background: silver;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .lightBoxContainer {

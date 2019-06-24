@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <lightbox :images="lightImages" :size="'red'"/>
+        <lightbox :images="lightImages" :toDisplay="4"/>
     </div>    
 </template>
 
@@ -17,13 +17,13 @@ const   lightImages = [
             poids: 1,
         },
         {
-            src: 'https://picsum.photos/674/447',
+            src: 'https://picsum.photos/673/447',
             poids: 1,
         },
         {
-            src: 'https://picsum.photos/673/447',
+            src: 'https://picsum.photos/672/447',
             poids: 1,
-        }
+        } 
 ]
 
 export default {
