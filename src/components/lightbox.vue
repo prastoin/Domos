@@ -74,6 +74,7 @@ export default {
         width: 640px;
         height: 447px;
         object-fit: cover;
+        border: 1px solid #24292e;
     }
 }
 
