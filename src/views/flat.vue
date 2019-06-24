@@ -13,7 +13,9 @@
                     cuisine equipee<br>
                     Derniere etage sans ascenceur<br>
                 </p>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1_QD14qh1xixRtaperPTocbUanJPQQaOD" width="640" height="480"></iframe>
+                <div style="width: 640px; height: 480px;">
+                    <img src="localisation.png">
+                </div>
             </div>
         </div>
     </div>
@@ -62,18 +64,15 @@ const imgs = {
     'Domos': [
         {
             src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
         },
         {
-            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
-        },           {
-            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+            src: 'https://www.parisianhome.com/media/photos/97476.jpg',
         },
         {
-            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
-            poids: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg'
+            src: 'https://www.parisianhome.com/media/photos/97479.jpg',
+        },
+        {
+            src: 'https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg',
 
         }
     ]
@@ -109,7 +108,6 @@ export default {
     margin-right: auto;
     max-width: 1480px;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     width: 100vw;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -118,9 +116,6 @@ export default {
 .lightBoxContainer {
     padding: 36px;
     max-width: 1680px;
-    img {
-        object-fit: contain;
-    }
 }
 
 .description {
@@ -135,5 +130,11 @@ export default {
         right: 0;
         top: 0;
     }
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 </style>

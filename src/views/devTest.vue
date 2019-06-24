@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <lightbox :images="lightImages" :toDisplay="4"/>
+        <img src="localisation.png" alt="">
     </div>    
 </template>
 

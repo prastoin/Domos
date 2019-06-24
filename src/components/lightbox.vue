@@ -19,8 +19,8 @@
                     <div class="container"
                     v-for="(img, index) in images"
                     :key="index"
-                    :style="index === selected ? 'transform: scale(1.2); border: 2px solid white;' : ''">
-                        <img :src="images[index].src" @click="selected = index">
+                    :style="index === selected ? 'transform: scale(1.2);' : ''">
+                        <img :src="images[index].src" @click="selected = index" :style="index === selected ? 'border: 2px solid white;' : ''">
                     </div>
                 </div>
             </div>
@@ -29,8 +29,7 @@
         v-for="(n, i) in toDisplay"
         :src="images[i].src"
         :key="i"
-        @click="switchV(visible); selected = i"
-        />
+        @click="switchV(visible); selected = i"/>
     </div>    
 </template>
 
@@ -47,7 +46,7 @@ export default {
         },
         assignV(visible)
         {
-            return ('display: ' + (visible ? 'block;' : 'none;'));
+            return ('display: ' + (visible ? 'table-cell;' : 'none;'));
         },
         incrSelected()
         {
@@ -72,7 +71,8 @@ export default {
     flex-wrap: wrap;
     img {
         max-width: 100%;
-        height: auto;
+        width: 640px;
+        height: 447px;
         object-fit: cover;
     }
 }
@@ -82,8 +82,10 @@ export default {
     width: 100%;
     height: 100%;
     top: 0;
+    left:0;
     .highlight {
         top: 0;
+        left:0;
         width: 100vw;
         height: 100vh;
         position: -webkit-sticky;
@@ -91,14 +93,15 @@ export default {
         color: black;
         background: rgba(0,0,0,0.8);
         img {
+            position: absolute;
+            width: 1024px;
+            height: 683px;
             transform: translate(-50%, -50%);
             left: 50%;
             top: 50%;
             max-width: 100%;
-            height: auto;
-            position: absolute;
             opacity: 1;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 }
@@ -180,7 +183,7 @@ export default {
 
 .iconsBar {
     position: absolute;
-    bottom: 1%;
+    bottom: 5%;
     left: 50%;
     width: 50vw;
     height: 8vh;
