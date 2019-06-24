@@ -42,8 +42,6 @@ export default {
 <style scoped lang="stylus">
 .root {
     margin-top: 64px;
-    margin-left: 32px;
-    margin-right: 32px;
     margin-bottom: 32px;
     padding: 16px; 
     display: flex;
