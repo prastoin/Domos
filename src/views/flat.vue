@@ -5,15 +5,25 @@
                <lightbox :images="imgs[flat_name]" :toDisplay="4"/>
             </div>
            <div class="description">
-                <p class="allTxt">Il ya tant de chambres<br>
-                    les animaux sont interdits<br>
-                    Espace non fumeur<br>
-                    2 salle de bain<br>
-                    Une terrasse<br>
-                    cuisine equipee<br>
-                    Derniere etage sans ascenceur<br>
-                </p>
-                <div style="width: 640px; height: 480px;">
+                <div class="tableContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Ascenseur</th>
+                                <th>Apero</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td>Etage: 1</td>                               
+                                <td>Etage: 2</td>                               
+                                <td>Etage: 3</td>                               
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+               <div class="imgContainer">
                     <img src="../../public/localisation.png">
                 </div>
             </div>
@@ -138,21 +148,35 @@ export default {
 
 .description {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 16px;
-    p {
-        padding-left: 36px;
-        text-align: left;
+    .tableContainer {
+        width: 50%;
+        table {
+            width: 80%;
+            background: white;
+//            border-collapse: collapse;
+            thead {
+                background: red;
+            }
+        }
     }
-    iframe {
-        right: 0;
-        top: 0;
+    .imgContainer {
+        width: 475px;
+        height: 460px;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
 }
 
-.map {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@media screen and (max-width: 1353px) {
+    .lightBoxContainer {
+        max-width: 642px;
+    }
 }
+
 </style>
