@@ -38,7 +38,7 @@ export default {
 .welcome {
     max-width: 1280px;
     margin-top: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     margin-right: auto;
     margin-left: auto;
     background: white;

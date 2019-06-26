@@ -8,10 +8,10 @@
             :style="assignV(visible)">
                 <div id="cross" class="close"
                 @click="switchV(visible)"></div>
-                <div style="position: absolute; top:50%; left: 10%; transform: translateY(-50%); z-index: 10;"><span
+                <div style="position: absolute; top:45%; left: 15%; transform: translateY(-50%); z-index: 10;"><span
                 class="arrow arrow-left"
                 @click="decrSelected()"></span></div>
-                <div style="position: absolute; top:50%; right: 10%; transform: translateY(-50%); z-index: 10;"><span
+                <div style="position: absolute; top:45%; right: 15%; transform: translateY(-50%); z-index: 10;"><span
                 class="arrow arrow-right"
                 @click="incrSelected()"></span></div>
                 <img :src="images[selected].src">
@@ -74,7 +74,6 @@ export default {
         width: 640px;
         height: 447px;
         object-fit: cover;
-        border: 1px solid #24292e;
     }
 }
 
@@ -99,7 +98,7 @@ export default {
             height: 683px;
             transform: translate(-50%, -50%);
             left: 50%;
-            top: 50%;
+            top: 45%;
             max-width: 100%;
             opacity: 1;
             object-fit: contain;

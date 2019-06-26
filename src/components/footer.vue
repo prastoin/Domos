@@ -13,7 +13,7 @@ export default {
 
 <style scoped lang="stylus">
 footer {
-    margin-top: auto;
+//    margin-top: auto;
     background: #24292e;
     width: 100%;
     height: 32px;

@@ -9,7 +9,7 @@
             <img 
             v-for="(image, i) in images"
             :src="image" 
-            :key="i"
+            :key="image"
             v-show="i === index"
             style="object-fit: cover;"/>
         </transition-group>

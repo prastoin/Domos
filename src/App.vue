@@ -29,6 +29,7 @@ export default {
   color: #2c3e50;
   position: relative;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 

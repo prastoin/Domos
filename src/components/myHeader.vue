@@ -31,6 +31,7 @@ header {
   display: flex;
   align-items: baseline;
   align-content: flex-end;
+  margin-bottom: auto;
 }
 
 .title {

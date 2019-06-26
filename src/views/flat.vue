@@ -14,7 +14,7 @@
                     Derniere etage sans ascenceur<br>
                 </p>
                 <div style="width: 640px; height: 480px;">
-                    <img src="localisation.png">
+                    <img src="../../public/localisation.png">
                 </div>
             </div>
         </div>
@@ -74,6 +74,22 @@ const imgs = {
         {
             src: 'https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg',
 
+        },
+        {
+            src: 'https://picsum.photos/675/447',
+            poids: 'https://picsum.photos/675/447'
+        },
+        {
+            src: 'https://picsum.photos/674/447',
+            poids: 'https://picsum.photos/674/447'
+        },
+        {
+            src: 'https://picsum.photos/673/447',
+            poids: 'https://picsum.photos/673/447'
+        },
+        {
+            src: 'https://picsum.photos/672/447',
+            poids: 'https://picsum.photos/672/447'
         }
     ]
 }
@@ -114,8 +130,10 @@ export default {
 }
 
 .lightBoxContainer {
-    padding: 36px;
-    max-width: 1680px;
+    align-self: center;
+    margin: 36px;
+    max-width: 1282px;
+    border: 1px solid black;
 }
 
 .description {
