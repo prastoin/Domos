@@ -1,4 +1,4 @@
-# maman
+# Domos
 
 ## Project setup
 ```
