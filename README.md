@@ -1,4 +1,4 @@
-# Domos [https;//domos.netlify.com]
+# Domos [https://domos.netlify.com]
 
 ## Project setup
 ```
