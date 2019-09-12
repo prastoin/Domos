@@ -37,21 +37,42 @@ import lightbox from "../components/lightbox.vue";
 const imgs = {
     'Athos': [
         {
-            src: 'https://picsum.photos/675/447',
+            src: '/C2/C2_LIVINGROOM_1.jpeg',
             poids: 'https://picsum.photos/675/447'
         },
         {
-            src: 'https://picsum.photos/674/447',
+            src: '/C2/C2_LIVINGROOM_2.jpeg',
             poids: 'https://picsum.photos/674/447'
         },
         {
-            src: 'https://picsum.photos/673/447',
+            src: '/C2/C2_LIVINGROOM_3.jpeg',
             poids: 'https://picsum.photos/673/447'
         },
         {
-            src: 'https://picsum.photos/672/447',
+            src: '/C2/C2_KITCHEN.jpeg',
             poids: 'https://picsum.photos/672/447'
-        }
+        },
+        {
+            src: '/C2/C2_CORRIDOR.jpeg',
+            poids: 'https://picsum.photos/673/447'
+        },
+        {
+            src: '/C2/C2_BEDROOM_1.jpeg',
+            poids: 'https://picsum.photos/673/447'
+        },
+        {
+            src: '/C2/C2_BEDROOM_2.jpeg',
+            poids: 'https://picsum.photos/673/447'
+        },
+        {
+            src: '/C2/C2_BATHROOM_1.jpeg',
+            poids: 'https://picsum.photos/673/447'
+        },
+        {
+            src: '/C2/C2_BATHROOM_2.jpeg',
+            poids: 'https://picsum.photos/673/447'
+        },
+ 
     ],
     'AtHome': [
          {

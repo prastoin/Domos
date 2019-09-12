@@ -25,7 +25,7 @@
 
 <script>
 const names = ['Athos', 'AtHome', 'Domos'];
-const images = ["https://www.parisianhome.com/media/photos/97476.jpg", "https://www.parisianhome.com/media/photos/97479.jpg", "https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg"];
+const images = ["/C2/C2_LIVINGROOM_2.jpeg", "https://www.parisianhome.com/media/photos/97479.jpg", "https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg"];
 
 export default {
     name: "slide",
