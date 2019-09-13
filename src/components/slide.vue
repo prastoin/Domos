@@ -25,7 +25,7 @@
 
 <script>
 const names = ['Athos', 'AtHome', 'Domos'];
-const images = ["/C2/C2_LIVINGROOM_2.jpeg", "https://www.parisianhome.com/media/photos/97479.jpg", "https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg"];
+const images = ["/C2/C2_LIVINGROOM_2.jpeg", "https://picsum.photos/700/500", "https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg"];
 
 export default {
     name: "slide",
@@ -67,7 +67,7 @@ export default {
         z-index: 3;
 
         background: black;
-        transition: 0.5s all ease-in;
+        transition: 1s all ease-in;
         span {
             z-index: 4;
             position:absolute;
@@ -86,7 +86,7 @@ export default {
         background: silver;
         width: 10%;
         height: 100%;
-        transition: 0.5s all ease;
+        transition: 1s all ease;
     }
     #photo {
         position: absolute;
@@ -99,7 +99,7 @@ export default {
 
 .container:hover {
     #txtContainer {
-        width: 40%;
+        width: 45%;
     }
     #flou {
         width: 0%;

@@ -137,6 +137,14 @@ export default {
     },
     components: {
         lightbox
+    },
+    methods:  {
+        resetScroll(){
+          window.scrollTo(0,0);
+        }
+    },
+    mounted() {
+        this.resetScroll();
     }
 }
 </script>

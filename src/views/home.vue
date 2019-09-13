@@ -13,8 +13,8 @@
 
 <script>
 
-import slide from "../components/slide.vue";
-import carousel from "../components/carousel.vue";
+import slide from "@/components/slide.vue";
+import carousel from "@/components/carousel.vue";
 
 export default {
     name: "home",

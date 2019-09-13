@@ -13,8 +13,12 @@
             v-show="i === index"
             style="object-fit: cover;"/>
         </transition-group>
-        <div @click="slideRight" class="button right">&gt;</div>
-        <div @click="slideLeft" class="button left">&lt;</div>
+        <div 
+        @click="clickDeal(1)" 
+        class="button right">&gt;</div>
+        <div 
+        @click="clickDeal(0)" 
+        class="button left">&lt;</div>
         <div class="navBar">
         <button
         :class="{active: n === index}"
@@ -31,7 +35,7 @@
 const images= [
     "https://vivreparis.fr/wp-content/uploads/2018/04/Pont_des_Arts_6e_Arrondissement_Paris_HDR_20140320_1-1-2.jpg",
     'https://blog-content.thestorefront.com/mag/wp-content/uploads/2017/02/image.jpg',
-    './googlemaps.png'
+    '/googlemaps.png'
 ];
 
 export default {
@@ -41,34 +45,58 @@ export default {
             index: 0,
             images,
             rl: false,
-            animate: false
-
+            animate: false,
+            intervalID: null,
+            timeOutID: null,
+            pause: false,
         }
     },
     methods: {
-    slideRight() {
+      clickDeal(value) {
+        this.pauseInterval();
+        value ? this.slideRight() : this.slideLeft();
+      },
+      slideRight() {
         if (this.animate)
             return;
         this.rl = false;
         this.index= (this.index + 1 ) % this.images.length;
-     },
-     slideLeft() {
+      },
+      slideLeft() {
         if (this.animate)
             return;
         this.rl = true;
         this.index = (this.index + this.images.length - 1) % this.images .length;
-     },
-     goTo(n) {
+      },
+      goTo(n) {
          if (this.animate)
             return;
          this.rl = n < this.index ? true : false;
          this.index = n;
+      },
+      pauseInterval() {
+        this.pause = true;
+        if (this.timeOutID)
+          clearTimeout(this.timeOutID);
+        this.timeOutID = window.setTimeout(() => {
+          this.pause = false;
+          clearTimeout(this.timeOutID);
+        }, 8000);
      }
     },
     computed: {
         rlStatus() {
             return (this.rl ? "l-slide" : "r-slide");
-        }
+        },
+    },
+    mounted() {
+        this.intervalID = window.setInterval(() => {
+          if (this.pause === false)
+            this.slideRight();
+        }, 7000);
+    },
+    destroyed() {
+        clearInterval(this.intervalID);
     }
 }
 </script>
@@ -135,28 +163,28 @@ img {
 
 .left {
     left: 0;
-    -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,1))); 
+    -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.9))); 
 }
 
 .right {
     right: 0;
-    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,1))); 
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.9))); 
 }
 
 .r-slide-enter-active {
-  animation: slideInRight 0.5s;
+  animation: slideInRight 1.5s;
 }
 
 .r-slide-leave-active {
-  animation: slideOutRight 0.5s;
+  animation: slideOutRight 1.5s;
 }
 
 .l-slide-enter-active {
-  animation: slideInLeft 0.5s;
+  animation: slideInLeft 1.5s;
 }
 
 .l-slide-leave-active {
-  animation: slideOutLeft 0.5s;
+  animation: slideOutLeft 1.5s;
 }
 
 @keyframes slideInRight {
