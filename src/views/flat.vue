@@ -76,7 +76,7 @@ const imgs = {
     ],
     'AtHome': [
          {
-            src: 'https://picsum.photos/675/447',
+            src: 'https://picsum.photos/1000/1000',
             poids: 'https://picsum.photos/675/447'
         },
         {
@@ -164,13 +164,12 @@ export default {
     max-width: 1480px;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .lightBoxContainer {
-    align-self: center;
-    margin: 36px;
+    margin: 32px auto;
     max-width: 1282px;
     border: 1px solid black;
 }
@@ -199,12 +198,6 @@ export default {
             height: auto;
             object-fit: cover;
         }
-    }
-}
-
-@media screen and (max-width: 1353px) {
-    .lightBoxContainer {
-        max-width: 642px;
     }
 }
 

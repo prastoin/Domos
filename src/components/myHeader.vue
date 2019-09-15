@@ -4,7 +4,6 @@
       <router-link to="/" style="text-decoration: none;" class="title">Domos.</router-link>
       <div>
         <span class="allTxt headerContent">Our flats.</span>
-        <span class="allTxt headerContent">My crushes in Paris.</span>
         <span class="allTxt headerContent">Contact.</span>
       </div>
       <div class="containerDeco">

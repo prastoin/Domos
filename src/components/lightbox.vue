@@ -1,8 +1,8 @@
 <template>
     <div class="root">
+        <!-- Not visibile layer -->
         <div class="absoluteContainer" 
         tabindex="-1"
-        @keyup.esc="switchV(visible)"
         :style="assignV(visible)">
             <div class="highlight"
             :style="assignV(visible)">
@@ -25,20 +25,45 @@
                 </div>
             </div>
         </div>
-        <img
-        v-for="(n, i) in toDisplay"
-        :src="images[i].src"
-        :key="i"
-        @click="switchV(visible); selected = i"/>
-    </div>    
+        <!-- Printed images on parent overlay-->
+        <div>
+            <div class="line">
+                <div v-for="(n, i) in 2"
+                class="cell"
+                :key="n">
+                    <img
+                    class="printed"
+                    :src="images[i].src"
+                    :key="i"
+                    @click="switchV(visible);
+                    selected = i"/> 
+                </div>
+            </div>
+            <div class="line">
+                <div v-for="(n, i) in 2"
+                class="cell"
+                :key="n">
+                    <img class="printed"
+                    :src="images[i + 2].src"
+                    :key="i + 2"
+                    @click="switchV(visible);
+                    selected = i + 2"/> 
+                </div>
+            </div>
+        </div>
+   </div>    
 </template>
 
 <script>
 
 export default {
     props: ["images", "toDisplay"],
-    data () {
-        return {visible: false, selected: 0}
+    name: "lightbox",
+    data() {
+        return {
+            visible: false,
+            selected: 0
+        }
     },
     methods: {
         switchV(visible) {
@@ -57,9 +82,24 @@ export default {
             this.selected = (this.selected - 1) % this.images.length;
             while (this.selected < 0)
                 this.selected += this.images.length;
+        },
+        onKey({ key }) {
+            if (!this.visible)
+                return;
+            if (key === 'ArrowRight')
+                this.incrSelected();
+            else if (key === 'ArrowLeft')
+                this.decrSelected();
+            else if (key === 'Escape')
+                this.switchV(this.visible);
         }
     },
-    name: "lightbox"
+    mounted() {
+        document.addEventListener('keydown', this.onKey);
+    },
+    destroyed() {
+        document.removeEventListener('keydown', this.onKey);
+    }
 }
 </script>
 
@@ -69,11 +109,17 @@ export default {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    img {
-        max-width: 100%;
-        width: 640px;
-        height: 447px;
-        object-fit: cover;
+    .line {
+        height: 50%;
+        display: flex;
+        .cell {
+            width: 100%;
+            .printed {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 }
 
@@ -99,7 +145,7 @@ export default {
             transform: translate(-50%, -50%);
             left: 50%;
             top: 45%;
-            max-width: 100%;
+            max-width: 70%;
             opacity: 1;
             object-fit: contain;
         }
@@ -203,4 +249,18 @@ export default {
         }
     }
 }
+
+/*@media screen and (max-width: 1353px) {
+    .printed{
+        width: 320px !important;
+        height: 224px !important;
+    }
+}
+
+@media screen and (max-width: 713px) {
+    .printed{
+        width: 160px !important;
+        height: 112px !important;
+    }
+}*/
 </style>
