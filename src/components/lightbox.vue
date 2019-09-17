@@ -128,6 +128,7 @@ export default {
 }
 
 .absoluteContainer {
+    z-index: 10;
     position: absolute;
     width: 100%;
     height: 100%;

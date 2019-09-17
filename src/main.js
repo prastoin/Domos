@@ -10,10 +10,12 @@ import {
   faRocket,
   faArrowRight,
   faArrowLeft,
+  faCheck,
+  faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faRocket, faArrowRight, faArrowLeft);
+library.add(faRocket, faArrowRight, faArrowLeft, faCheck, faTimes);
 Vue.component("icon", FontAwesomeIcon);
 
 Vue.use(VueLazyLoad)
