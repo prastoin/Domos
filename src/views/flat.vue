@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import lightbox from "../components/lightbox.vue";
+import lightbox from "@/components/lightbox.vue";
 
 const imgs = {
     'Athos': [
@@ -170,8 +170,6 @@ export default {
 
 .lightBoxContainer {
     margin: 32px auto;
-    max-width: 1282px;
-    border: 1px solid black;
 }
 
 .description {
@@ -198,6 +196,12 @@ export default {
             height: auto;
             object-fit: cover;
         }
+    }
+}
+
+@media screen and (max-width: 1353px) {
+    .lightBoxContainer {
+        max-width: 95vw;
     }
 }
 

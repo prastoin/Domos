@@ -1,10 +1,20 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import VueLazyLoad from 'vue-lazyload';
-import Lightbox from 'vue-my-photos';
 
-Vue.component('lightbox', Lightbox);
+import VueLazyLoad from 'vue-lazyload';
+
+/* FA */
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faRocket,
+  faArrowRight,
+  faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+library.add(faRocket, faArrowRight, faArrowLeft);
+Vue.component("icon", FontAwesomeIcon);
 
 Vue.use(VueLazyLoad)
 Vue.config.productionTip = false;

@@ -8,19 +8,21 @@
             :style="assignV(visible)">
                 <div id="cross" class="close"
                 @click="switchV(visible)"></div>
-                <div style="position: absolute; top:45%; left: 15%; transform: translateY(-50%); z-index: 10;"><span
-                class="arrow arrow-left"
-                @click="decrSelected()"></span></div>
-                <div style="position: absolute; top:45%; right: 15%; transform: translateY(-50%); z-index: 10;"><span
-                class="arrow arrow-right"
-                @click="incrSelected()"></span></div>
-                <img :src="images[selected].src">
+                <div class="selectedContainer">
+                    <div style="position: absolute; top:45%; left: 10%; transform: translateY(-50%); z-index: 10;">
+                        <icon class="arrow" icon="arrow-left" @click="decrSelected()"/>
+                    </div>
+                    <div style="position: absolute; top:45%; right: 10%; transform: translateY(-50%); z-index: 10;">
+                        <icon class="arrow" icon="arrow-right" @click="incrSelected()"/>
+                    </div>
+                    <img class="main" :src="images[selected].src">
+                </div>
                 <div class="iconsBar">
                     <div class="container"
                     v-for="(img, index) in images"
                     :key="index"
                     :style="index === selected ? 'transform: scale(1.2);' : ''">
-                        <img :src="images[index].src" @click="selected = index" :style="index === selected ? 'border: 2px solid white;' : ''">
+                        <img class="iconImg" :src="images[index].src" @click="selected = index" :style="index === selected ? 'border: 1.5px solid white;' : ''">
                     </div>
                 </div>
             </div>
@@ -106,13 +108,15 @@ export default {
 <style lang="stylus" scoped>
 
 .root {
+    max-width: 1312px;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     .line {
         height: 50%;
         display: flex;
         .cell {
+            outline: 1.5px solid black;
             width: 100%;
             .printed {
                 width: 100%;
@@ -130,6 +134,7 @@ export default {
     top: 0;
     left:0;
     .highlight {
+        position: absolute;
         top: 0;
         left:0;
         width: 100vw;
@@ -138,7 +143,7 @@ export default {
         position: sticky;
         color: black;
         background: rgba(0,0,0,0.8);
-        img {
+        .main {
             position: absolute;
             width: 1024px;
             height: 683px;
@@ -149,10 +154,34 @@ export default {
             opacity: 1;
             object-fit: contain;
         }
+        .iconsBar {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            margin: 0 auto;
+            width: 90vw;
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            .container {
+                position: relative;
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 10%;
+                height: 100%;
+                .iconImg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
 
 .arrow {
+    color: white;
     z-index: 5;
     opacity: 0.7;
     transition: all 0.3s ease;
@@ -164,40 +193,6 @@ export default {
     &:hover{
         opacity: 1;
     }
-}
-.arrow:before, .arrow:after {
-    content: '';
-    border-color: transparent;
-    border-style: solid;
-    position: absolute;
-}
-.arrow-left:before {
-    border: none;
-    background-color: #FFF;
-    height: 30%;
-    width: 50%;
-    top: 35%;
-    left: 50%;
-}
-.arrow-left:after {
-    left: -50%;
-    top: 0;
-    border-width: 30px 30px;
-    border-right-color: #FFF;
-}
-.arrow-right:before {
-    border: none;
-    background-color: #FFF;
-    height: 30%;
-    width: 50%;
-    top: 35%;
-    left: 0;
-}
-.arrow-right:after {
-    left: 50%;
-    top: 0;
-    border-width: 30px 30px;
-    border-left-color: #FFF;
 }
 
 .close {
@@ -227,40 +222,8 @@ export default {
   transform: rotate(-45deg);
 }
 
-.iconsBar {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    width: 50vw;
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    transform: translateX(-50%);
-    .container {
-        position: relative;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 15%;
-        height: 100%;
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
-    }
+@media screen and (max-width: 1353px) {
+    
 }
 
-/*@media screen and (max-width: 1353px) {
-    .printed{
-        width: 320px !important;
-        height: 224px !important;
-    }
-}
-
-@media screen and (max-width: 713px) {
-    .printed{
-        width: 160px !important;
-        height: 112px !important;
-    }
-}*/
 </style>
