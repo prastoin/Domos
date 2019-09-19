@@ -4,7 +4,7 @@
             <p class="welcome">Welcome</p> 
         </div>
         <div class="container">
-            <p class="allTxt">Mon coup de coeur du moment</p>
+            <p class="allTxt" style="padding-top: 24px;"></p>
             <carousel/>
         </div>
         <slide/>
@@ -28,7 +28,7 @@ export default {
 <style scoped lang="stylus">
 
 .container {
-    max-width: 1480px;
+    max-width: 1080px;
     margin-right: auto;
     margin-left: auto;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -45,4 +45,5 @@ export default {
     font-size: 1.5rem;
     text-decoration: underline;
 }
+
 </style>

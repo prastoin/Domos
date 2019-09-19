@@ -10,8 +10,7 @@
             v-for="(image, i) in images"
             :src="image" 
             :key="image"
-            v-show="i === index"
-            style="object-fit: cover;"/>
+            v-show="i === index"/>
         </transition-group>
         <div 
         @click="clickDeal(1)" 
@@ -33,9 +32,9 @@
 
 <script>
 const images= [
-    "https://vivreparis.fr/wp-content/uploads/2018/04/Pont_des_Arts_6e_Arrondissement_Paris_HDR_20140320_1-1-2.jpg",
-    'https://blog-content.thestorefront.com/mag/wp-content/uploads/2017/02/image.jpg',
-    '/googlemaps.png'
+    '/B4/B4_LIVINGROOM_1.jpeg',
+    '/C2/C2_LIVINGROOM_2.jpeg',
+    '/B4/B4_CORRIDOR_6.jpeg'
 ];
 
 export default {
@@ -144,7 +143,7 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .button {
@@ -205,5 +204,14 @@ img {
 @keyframes slideOutLeft {
   from { transform: translateX(0); }
   to { transform: translateX(100%); }
+}
+
+@media screen and (max-width: 831px) {
+  .galerie {
+    height: 400px;
+  }
+  img {
+    object-fit: cover;
+  }
 }
 </style>

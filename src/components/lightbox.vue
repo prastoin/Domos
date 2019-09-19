@@ -151,12 +151,11 @@ export default {
         background: rgba(0,0,0,0.8);
         .main {
             position: absolute;
-            width: 1024px;
-            height: 683px;
             transform: translate(-50%, -50%);
             left: 50%;
             top: 45%;
             max-width: 70%;
+            max-height: 80%;
             opacity: 1;
             object-fit: contain;
         }
@@ -240,12 +239,15 @@ export default {
   transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 1353px) {
-    
+@media screen and (max-width: 831px) {
+   .main {
+       max-width: 90% !important;
+       max-height: 90% !important;
+   } 
 }
 .iconsBar::-webkit-scrollbar {
   width: 6px;
-  height: 4px;
+  height: 6px;
   background-color: rgba(0, 0, 0, 0, 0.8); /* or add it to the track */
 }
 .iconsBar::-webkit-scrollbar-thumb {
