@@ -56,4 +56,16 @@ body {
   box-sizing: border-box;
   line-height: 1.5;
 }
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 16px;
+  background-color: rgb(36, 41, 46); /* or add it to the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: grey;
+    opacity: 0.6;
+    border-radius: 10px;
+}
 </style>

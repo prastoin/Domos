@@ -57,39 +57,30 @@ const imgs = {
     'Athos': [
         {
             src: '/C2/C2_LIVINGROOM_1.jpeg',
-            poids: 'https://picsum.photos/675/447'
         },
         {
             src: '/C2/C2_LIVINGROOM_2.jpeg',
-            poids: 'https://picsum.photos/674/447'
         },
         {
             src: '/C2/C2_LIVINGROOM_3.jpeg',
-            poids: 'https://picsum.photos/673/447'
         },
         {
             src: '/C2/C2_KITCHEN.jpeg',
-            poids: 'https://picsum.photos/672/447'
         },
         {
             src: '/C2/C2_CORRIDOR.jpeg',
-            poids: 'https://picsum.photos/673/447'
         },
         {
             src: '/C2/C2_BEDROOM_1.jpeg',
-            poids: 'https://picsum.photos/673/447'
         },
         {
             src: '/C2/C2_BEDROOM_2.jpeg',
-            poids: 'https://picsum.photos/673/447'
         },
         {
             src: '/C2/C2_BATHROOM_1.jpeg',
-            poids: 'https://picsum.photos/673/447'
         },
         {
             src: '/C2/C2_BATHROOM_2.jpeg',
-            poids: 'https://picsum.photos/673/447'
         },
  
     ],
@@ -113,34 +104,83 @@ const imgs = {
     ],
     'Domos': [
         {
-            src: 'https://www.parisianhome.com/media/photos/21209_6Amzt11.jpg',
+            src: '/B4/B4_LIVINGROOM_1.jpeg',
         },
         {
-            src: 'https://www.parisianhome.com/media/photos/97476.jpg',
+            src: '/B4/B4_LIVINGROOM_2.jpeg',
         },
         {
-            src: 'https://www.parisianhome.com/media/photos/97479.jpg',
+            src: '/B4/B4_LIVINGROOM_3.jpeg',
         },
         {
-            src: 'https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg',
-
+            src: '/B4/B4_LIVINGROOM_4.jpeg',
         },
         {
-            src: 'https://picsum.photos/675/447',
-            poids: 'https://picsum.photos/675/447'
+            src: '/B4/B4_LIVINGROOM_5.jpeg',
         },
         {
-            src: 'https://picsum.photos/674/447',
-            poids: 'https://picsum.photos/674/447'
+            src: '/B4/B4_KITCHEN_1.jpeg',
         },
         {
-            src: 'https://picsum.photos/673/447',
-            poids: 'https://picsum.photos/673/447'
+            src: '/B4/B4_KITCHEN_2.jpeg',
         },
         {
-            src: 'https://picsum.photos/672/447',
-            poids: 'https://picsum.photos/672/447'
-        }
+            src: '/B4/B4_KITCHEN_3.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_1.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_2.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_3.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_4.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_5.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_6.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_1.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_2.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_3.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_4.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_5.jpeg',
+        },
+        {
+            src: '/B4/B4_BATHROOM_1.jpeg',
+        },
+        {
+            src: '/B4/B4_BATHROOM_2.jpeg',
+        },
+        {
+            src: '/B4/B4_BATHROOM_3.jpeg',
+        },
+        {
+            src: '/B4/B4_TERASSE_1.jpeg',
+        },
+        {
+            src: '/B4/B4_TERASSE_2.jpeg',
+        },
+        {
+            src: '/B4/B4_TERASSE_3.jpeg',
+        },
+        {
+            src: '/B4/B4_WC_1.jpeg',
+        },
     ]
 }
 

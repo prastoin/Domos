@@ -21,8 +21,9 @@
                     <div class="container"
                     v-for="(img, index) in images"
                     :key="index"
-                    :style="index === selected ? 'transform: scale(1.2);' : ''">
-                        <img class="iconImg" :src="images[index].src" @click="selected = index" :style="index === selected ? 'border: 1.5px solid white;' : ''">
+                    :id="index"
+                    :style="index === selected ? 'transform: scale(1.1);' : ''">
+                        <img class="iconImg" :src="images[index].src" @click="iconClick(index)" :style="index === selected ? 'border: 1.5px solid white;' : ''">
                     </div>
                 </div>
             </div>
@@ -84,6 +85,10 @@ export default {
             this.selected = (this.selected - 1) % this.images.length;
             while (this.selected < 0)
                 this.selected += this.images.length;
+        },
+        iconClick (index) {
+            document.getElementById(index).focus();
+            this.selected = index;
         },
         onKey({ key }) {
             if (!this.visible)
@@ -156,26 +161,38 @@ export default {
             object-fit: contain;
         }
         .iconsBar {
+            z-index: 10;
             position: absolute;
-            bottom: 5%;
+            bottom: 2%;
             left: 50%;
             transform: translate(-50%, 0);
             margin: 0 auto;
             width: 90vw;
-            height: 8vh;
+            height: 12vh;
             display: flex;
-            justify-content: center;
+            overflow: scroll;
+            overflow-y: visible;
+            padding-top: 6px;
             .container {
                 position: relative;
                 margin-left: 10px;
                 margin-right: 10px;
-                width: 10%;
-                height: 100%;
+                flex: 0 0 130px;
+                height: 90%;
                 .iconImg {
+                    z-index: 99;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
+            }
+            .container:first-child {
+                padding-left: 9px;
+                margin-left: auto;
+            }
+            .container:last-child {
+                padding-right: 9px;
+                margin-right: auto;
             }
         }
     }
@@ -226,5 +243,14 @@ export default {
 @media screen and (max-width: 1353px) {
     
 }
-
+.iconsBar::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0, 0.8); /* or add it to the track */
+}
+.iconsBar::-webkit-scrollbar-thumb {
+    background: grey;
+    opacity: 0.6;
+    border-radius: 10px;
+}
 </style>
