@@ -239,7 +239,7 @@ export default {
   transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 831px) {
+@media screen and (max-width: 750px) {
    .main {
        max-width: 90% !important;
        max-height: 90% !important;
