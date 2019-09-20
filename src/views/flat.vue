@@ -85,22 +85,73 @@ const imgs = {
  
     ],
     'AtHome': [
-         {
-            src: 'https://picsum.photos/1000/1000',
-            poids: 'https://picsum.photos/675/447'
+        {
+            src: '/C4/C4_LIVINGROOM_1.jpeg',
         },
         {
-            src: 'https://picsum.photos/674/447',
-            poids: 'https://picsum.photos/674/447'
+            src: '/C4/C4_LIVINGROOM_2.jpeg',
         },
         {
-            src: 'https://picsum.photos/673/447',
-            poids: 'https://picsum.photos/673/447'
+            src: '/C4/C4_LIVINGROOM_3.jpeg',
         },
         {
-            src: 'https://picsum.photos/672/447',
-            poids: 'https://picsum.photos/672/447'
-        }
+            src: '/C4/C4_LIVINGROOM_4.jpeg',
+        },
+        {
+            src: '/C4/C4_LIVINGROOM_5.jpeg',
+        },
+        {
+            src: '/C4/C4_KITCHEN_1.jpeg',
+        },
+        {
+            src: '/C4/C4_KITCHEN_2.jpeg',
+        },
+        {
+            src: '/C4/C4_KITCHEN_3.jpeg',
+        },
+        {
+            src: '/C4/C4_CORRIDOR_1.jpeg',
+        },
+        {
+            src: '/C4/C4_CORRIDOR_2.jpeg',
+        },
+        {
+            src: '/C4/C4_CORRIDOR_3.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_1.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_2.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_3.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_4.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_5.jpeg',
+        },
+        {
+            src: '/C4/C4_BATHROOM_1.jpeg',
+        },
+        {
+            src: '/C4/C4_BATHROOM_2.jpeg',
+        },
+        {
+            src: '/C4/C4_BATHROOM_3.jpeg',
+        },
+        {
+            src: '/C4/C4_TERASSE_1.jpeg',
+        },
+        {
+            src: '/C4/C4_TERASSE_2.jpeg',
+        },
+        {
+            src: '/C4/C4_WC_1.jpeg',
+        },
+
     ],
     'Domos': [
         {

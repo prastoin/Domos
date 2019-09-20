@@ -25,7 +25,7 @@
 
 <script>
 const names = ['Athos', 'AtHome', 'Domos'];
-const images = ["/C2/C2_LIVINGROOM_2.jpeg", "https://picsum.photos/700/500", "https://www.parisianhome.com/media/photos/0_0061_OPqpQ0j.jpg"];
+const images = ["/C2/C2_LIVINGROOM_2.jpeg", "/C4/C4_LIVINGROOM_3.jpeg", "/B4/B4_KITCHEN_5.jpeg"];
 
 export default {
     name: "slide",
