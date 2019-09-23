@@ -30,29 +30,23 @@
         </div>
         <!-- Printed images on parent overlay-->
         <div>
-            <div class="line">
-                <div v-for="(n, i) in 2"
-                class="cell"
-                :key="n">
-                    <img
-                    class="printed"
-                    :src="images[i].src"
-                    :key="i"
-                    @click="switchV(visible);
-                    selected = i"/> 
+            <template v-for="(index, i) in 2">
+                <div class="line" :key="i">
+                    <div
+                        v-for="(n, j) in 2"
+                        class="cell"
+                        :key="n"
+                    >
+                        <img
+                            class="printed"
+                            :id="i * 2 + j"
+                            :src="images[i * 2 + j].src"
+                            :key="j"
+                            @click="switchV(visible, i * 2 + j)"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="line">
-                <div v-for="(n, i) in 2"
-                class="cell"
-                :key="n">
-                    <img class="printed"
-                    :src="images[i + 2].src"
-                    :key="i + 2"
-                    @click="switchV(visible);
-                    selected = i + 2"/> 
-                </div>
-            </div>
+           </template>
         </div>
    </div>    
 </template>
@@ -69,8 +63,9 @@ export default {
         }
     },
     methods: {
-        switchV(visible) {
+        switchV(visible, i) {
             this.visible = !visible;
+            if (i !== undefined) this.selected = i; 
         },
         assignV(visible)
         {
