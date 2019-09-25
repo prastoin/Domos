@@ -1,8 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/home.vue";
-import flat from "./views/flat";
-import devTest from "./views/devTest.vue";
+import Home from "@/views/home.vue";
+import flat from "@/views/flat.vue";
+import devTest from "@/views/devTest.vue";
+import contact from "@/views/contact.vue";
 
 Vue.use(Router);
 
@@ -25,6 +26,11 @@ export default new Router({
       path: "/dev",
       name: "devTest",
       component: devTest
+    },
+    {
+      path: "/contact",
+      name: 'contact',
+      component: contact
     }
    /*{
       path: "/about",
