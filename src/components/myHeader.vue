@@ -3,8 +3,8 @@
       <header>
       <router-link to="/" style="text-decoration: none;" class="title">Domos.</router-link>
       <div>
-        <span class="allTxt headerContent">Our flats.</span>
-        <span class="allTxt headerContent">Contact.</span>
+        <span class="allTxt headerContent">Our flats</span>
+        <router-link to="/contact" style="text-decoration: none;" class="allTxt headerContent">Contact</router-link>
       </div>
       <div class="containerDeco">
         <div class="headerDeco" style="width: 20px; height: 20px;"></div>
@@ -16,8 +16,7 @@
 
 <script>
 export default {
-    name: "myHeader"
-
+    name: "myHeader",
 }
 </script>
 
