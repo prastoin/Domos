@@ -165,10 +165,10 @@ const imgs = {
             src: '/C4/C4_CORRIDOR_3.jpeg',
         },
         {
-            src: '/C4/C4_TERASSE_1.jpeg',
+            src: '/C4/C4_TERRASSE_1.jpeg',
         },
         {
-            src: '/C4/C4_TERASSE_2.jpeg',
+            src: '/C4/C4_TERRASSE_2.jpeg',
         },
     ],
     'AtHome': [

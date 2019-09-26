@@ -34,7 +34,7 @@
 const images= [
     '/B4/B4_LIVINGROOM_1.jpeg',
     '/C2/C2_LIVINGROOM_2.jpeg',
-    '/B4/B4_CORRIDOR_6.jpeg'
+    '/C4/C4_TERRASSE_2.jpeg'
 ];
 
 export default {
