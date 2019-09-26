@@ -24,7 +24,7 @@
 </template>
 
 <script>
-const names = ['Aramis', "D'Artagnan", 'At\'Home'];
+const names = ['Aramis', "D'Artagnan", 'AtHome'];
 const images = ["/C2/C2_LIVINGROOM_2.jpeg", "/C4/C4_LIVINGROOM_3.jpeg", "/B4/B4_KITCHEN_5.jpeg"];
 
 export default {
@@ -41,8 +41,8 @@ export default {
 
 <style scoped lang="stylus">
 .root {
-    margin-top: 36px;
-    margin-bottom: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 16px; 
     display: flex;
     flex-wrap: wrap;
