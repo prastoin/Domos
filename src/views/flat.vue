@@ -92,23 +92,29 @@ const imgs = {
     ],
     'D\'Artagnan': [
         {
-            src: '/C4/C4_LIVINGROOM_1.jpeg',
+            src: '/C4/C4_CORRIDOR_1.jpeg',
             print: '/C4/C4_LIVINGROOM_3.jpeg',
         },
         {
-            src: '/C4/C4_LIVINGROOM_2.jpeg',
+            src: '/C4/C4_LIVINGROOM_1.jpeg',
             print: '/C4/C4_LIVINGROOM_4.jpeg',
         },
         {
-            src: '/C4/C4_LIVINGROOM_3.jpeg',
+            src: '/C4/C4_LIVINGROOM_2.jpeg',
             print: '/C4/C4_TERASSE_2.jpeg',
         },
         {
-            src: '/C4/C4_LIVINGROOM_4.jpeg',
+            src: '/C4/C4_LIVINGROOM_3.jpeg',
             print: '/C4/C4_BEDROOM_4.jpeg',
         },
         {
-            src: '/C4/C4_LIVINGROOM_5.jpeg',
+            src: '/C4/C4_CORRIDOR_2.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_5.jpeg',
+        },
+        {
+            src: '/C4/C4_LIVINGROOM_4.jpeg',
         },
         {
             src: '/C4/C4_KITCHEN_1.jpeg',
@@ -120,31 +126,7 @@ const imgs = {
             src: '/C4/C4_KITCHEN_3.jpeg',
         },
         {
-            src: '/C4/C4_CORRIDOR_1.jpeg',
-        },
-        {
-            src: '/C4/C4_CORRIDOR_2.jpeg',
-        },
-        {
-            src: '/C4/C4_CORRIDOR_3.jpeg',
-        },
-        {
-            src: '/C4/C4_BEDROOM_1.jpeg',
-        },
-        {
-            src: '/C4/C4_BEDROOM_2.jpeg',
-        },
-        {
-            src: '/C4/C4_BEDROOM_3.jpeg',
-        },
-        {
-            src: '/C4/C4_BEDROOM_4.jpeg',
-        },
-        {
-            src: '/C4/C4_BEDROOM_5.jpeg',
-        },
-        {
-            src: '/C4/C4_BATHROOM_1.jpeg',
+            src: '/C4/C4_LIVINGROOM_5.jpeg',
         },
         {
             src: '/C4/C4_BATHROOM_2.jpeg',
@@ -153,31 +135,58 @@ const imgs = {
             src: '/C4/C4_BATHROOM_3.jpeg',
         },
         {
+            src: '/C4/C4_WC_1.jpeg',
+        },
+        {
+            src: '/C4/C4_CORRIDOR_4.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_4.jpeg',
+        },
+        {
+            src: '/C4/C4_BATHROOM_1.jpeg',
+        },
+        {
+            src: '/C4/C4_BATHROOM_4.jpg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_1.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_2.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_6.jpeg',
+        },
+        {
+            src: '/C4/C4_BEDROOM_3.jpeg',
+        },
+        {
+            src: '/C4/C4_CORRIDOR_3.jpeg',
+        },
+        {
             src: '/C4/C4_TERASSE_1.jpeg',
         },
         {
             src: '/C4/C4_TERASSE_2.jpeg',
         },
-        {
-            src: '/C4/C4_WC_1.jpeg',
-        },
-
     ],
-    'At Home': [
+    'AtHome': [
         {
-            src: '/B4/B4_LIVINGROOM_1.jpeg',
+            src: '/B4/B4_CORRIDOR_1.jpeg',
+            print: '/B4/B4_LIVINGROOM_1.jpeg',
         },
         {
-            src: '/B4/B4_LIVINGROOM_2.jpeg',
+            src: '/B4/B4_WC_1.jpeg',
+            print: '/B4/B4_TERRASSE_1.jpeg',
         },
         {
-            src: '/B4/B4_LIVINGROOM_3.jpeg',
+            src: '/B4/B4_CORRIDOR_2.jpeg',
+            print: '/B4/B4_KITCHEN_4.jpeg',
         },
         {
-            src: '/B4/B4_LIVINGROOM_4.jpeg',
-        },
-        {
-            src: '/B4/B4_LIVINGROOM_5.jpeg',
+            src: '/B4/B4_CORRIDOR_5.jpeg',
+            print: '/B4/B4_CORRIDOR_6.jpeg',
         },
         {
             src: '/B4/B4_KITCHEN_1.jpeg',
@@ -186,43 +195,37 @@ const imgs = {
             src: '/B4/B4_KITCHEN_2.jpeg',
         },
         {
-            src: '/B4/B4_KITCHEN_3.jpeg',
+            src: '/B4/B4_KITCHEN_3.jpeg', //
         },
         {
-            src: '/B4/B4_CORRIDOR_1.jpeg',
+            src: '/B4/B4_KITCHEN_4.jpeg',
         },
         {
-            src: '/B4/B4_CORRIDOR_2.jpeg',
+            src: '/B4/B4_KITCHEN_5.jpeg',
         },
         {
-            src: '/B4/B4_CORRIDOR_3.jpeg',
+            src: '/B4/B4_LIVINGROOM_1.jpeg',
         },
         {
-            src: '/B4/B4_CORRIDOR_4.jpeg',
+            src: '/B4/B4_LIVINGROOM_2.jpeg',
         },
         {
-            src: '/B4/B4_CORRIDOR_5.jpeg',
+            src: '/B4/B4_LIVINGROOM_5.jpeg',
+        },
+        {
+            src: '/B4/B4_LIVINGROOM_3.jpeg',
+        },
+        {
+            src: '/B4/B4_LIVINGROOM_6.jpeg',
+        },
+        {
+            src: '/B4/B4_LIVINGROOM_4.jpeg',
         },
         {
             src: '/B4/B4_CORRIDOR_6.jpeg',
         },
         {
-            src: '/B4/B4_BEDROOM_1.jpeg',
-        },
-        {
             src: '/B4/B4_BEDROOM_2.jpeg',
-        },
-        {
-            src: '/B4/B4_BEDROOM_3.jpeg',
-        },
-        {
-            src: '/B4/B4_BEDROOM_4.jpeg',
-        },
-        {
-            src: '/B4/B4_BEDROOM_5.jpeg',
-        },
-        {
-            src: '/B4/B4_BATHROOM_1.jpeg',
         },
         {
             src: '/B4/B4_BATHROOM_2.jpeg',
@@ -231,16 +234,28 @@ const imgs = {
             src: '/B4/B4_BATHROOM_3.jpeg',
         },
         {
-            src: '/B4/B4_TERASSE_1.jpeg',
+            src: '/B4/B4_BATHROOM_1.jpeg',
         },
         {
-            src: '/B4/B4_TERASSE_2.jpeg',
+            src: '/B4/B4_BEDROOM_3.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_6.jpeg',
+        },
+        {
+            src: '/B4/B4_BEDROOM_5.jpeg',
+        },
+        {
+            src: '/B4/B4_CORRIDOR_3.jpeg',
+        },
+        {
+            src: '/B4/B4_TERASSE_1.jpeg',
         },
         {
             src: '/B4/B4_TERASSE_3.jpeg',
         },
         {
-            src: '/B4/B4_WC_1.jpeg',
+            src: '/B4/B4_TERASSE_2.jpeg',
         },
     ]
 }
