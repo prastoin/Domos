@@ -28,7 +28,7 @@ export default {
 <style scoped lang="stylus">
 
 .container {
-    max-width: 1080px;
+    max-width: 990px;
     margin-right: auto;
     margin-left: auto;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);

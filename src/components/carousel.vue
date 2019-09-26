@@ -132,7 +132,7 @@ export default {
 
 .galerie {
     position: relative;
-    height: 600px;
+    height: 570px;
     width: 100%;
     overflow: hidden;
 }

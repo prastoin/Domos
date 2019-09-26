@@ -24,7 +24,7 @@
 </template>
 
 <script>
-const names = ['Athos', 'AtHome', 'Domos'];
+const names = ['Aramis', "D'Artagnan", 'At\'Home'];
 const images = ["/C2/C2_LIVINGROOM_2.jpeg", "/C4/C4_LIVINGROOM_3.jpeg", "/B4/B4_KITCHEN_5.jpeg"];
 
 export default {
@@ -41,8 +41,8 @@ export default {
 
 <style scoped lang="stylus">
 .root {
-    margin-top: 42px;
-    margin-bottom: 42px;
+    margin-top: 36px;
+    margin-bottom: 36px;
     padding: 16px; 
     display: flex;
     flex-wrap: wrap;
@@ -55,13 +55,13 @@ export default {
     margin: 32px;
     flex: wrap;
     display: flex;
-    width: 400px;
-    height: 250px;
+    width: 380px;
+    height: 230px;
     position: relative;
     #txtContainer {
         position: relative;
         -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.8))); 
-        width: 50%;
+        width: 53%;
         height: 100%;
         opacity: 0.8;
         z-index: 3;
@@ -73,7 +73,7 @@ export default {
             position:absolute;
             top: 50%;
             left: 50%;
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: white;
             font-weight: bold;
             -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,1))); 

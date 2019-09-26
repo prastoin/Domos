@@ -40,7 +40,7 @@
                         <img
                             class="printed"
                             :id="i * 2 + j"
-                            :src="images[i * 2 + j].src"
+                            :src="images[i * 2 + j].print"
                             :key="j"
                             @click="switchV(visible, i * 2 + j)"
                         />
@@ -108,15 +108,15 @@ export default {
 <style lang="stylus" scoped>
 
 .root {
-    max-width: 1312px;
-    max-height: 100vh;
+    max-width: 1096px;
+    max-height: 95vh;
     display: flex;
     justify-content: center;
     .line {
         height: 50%;
         display: flex;
         .cell {
-            outline: 1.5px solid black;
+            outline: 3.5px solid #24292e;
             width: 100%;
             .printed {
                 width: 100%;

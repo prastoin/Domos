@@ -54,27 +54,25 @@
 import lightbox from "@/components/lightbox.vue";
 
 const imgs = {
-    'Athos': [
+    'Aramis': [
         {
-            src: '/C2/C2_LIVINGROOM_1.jpeg',
+            src: '/C2/C2_LIVINGROOM_3.jpeg',
+            print: '/C2/C2_LIVINGROOM_2.jpeg',
         },
         {
             src: '/C2/C2_LIVINGROOM_2.jpeg',
-        },
-        {
-            src: '/C2/C2_LIVINGROOM_3.jpeg',
+            print: '/C2/C2_KITCHEN.jpeg',
         },
         {
             src: '/C2/C2_KITCHEN.jpeg',
+            print: '/C2/C2_LIVINGROOM_1.jpeg',
+        },
+        {
+            src: '/C2/C2_LIVINGROOM_1.jpeg',
+            print: '/C2/C2_BEDROOM_1.jpeg',
         },
         {
             src: '/C2/C2_CORRIDOR.jpeg',
-        },
-        {
-            src: '/C2/C2_BEDROOM_1.jpeg',
-        },
-        {
-            src: '/C2/C2_BEDROOM_2.jpeg',
         },
         {
             src: '/C2/C2_BATHROOM_1.jpeg',
@@ -82,20 +80,32 @@ const imgs = {
         {
             src: '/C2/C2_BATHROOM_2.jpeg',
         },
- 
+        {
+            src: '/C2/C2_WC.jpeg',
+        },
+        {
+            src: '/C2/C2_BEDROOM_1.jpeg',
+        },
+        {
+            src: '/C2/C2_BEDROOM_2.jpeg',
+        },
     ],
-    'AtHome': [
+    'D\'Artagnan': [
         {
             src: '/C4/C4_LIVINGROOM_1.jpeg',
+            print: '/C4/C4_LIVINGROOM_3.jpeg',
         },
         {
             src: '/C4/C4_LIVINGROOM_2.jpeg',
+            print: '/C4/C4_LIVINGROOM_4.jpeg',
         },
         {
             src: '/C4/C4_LIVINGROOM_3.jpeg',
+            print: '/C4/C4_TERASSE_2.jpeg',
         },
         {
             src: '/C4/C4_LIVINGROOM_4.jpeg',
+            print: '/C4/C4_BEDROOM_4.jpeg',
         },
         {
             src: '/C4/C4_LIVINGROOM_5.jpeg',
@@ -153,7 +163,7 @@ const imgs = {
         },
 
     ],
-    'Domos': [
+    'At Home': [
         {
             src: '/B4/B4_LIVINGROOM_1.jpeg',
         },
@@ -277,7 +287,7 @@ export default {
         margin-bottom: 36px;
         margin-left: auto;
         margin-right: auto;
-        max-width: 1480px;
+        max-width: 1280px;
         display: flex;
         flex-direction: column;
         width: 100%;
