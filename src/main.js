@@ -11,7 +11,7 @@ import {
   faArrowRight,
   faArrowLeft,
   faCheck,
-  faTimes
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 

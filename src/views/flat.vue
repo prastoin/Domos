@@ -1,57 +1,20 @@
 <template>
     <div id="root">
         <div class="container">
+            <span style="font-size: 1.5rem; align-self: center">
+                {{ flat_name }}
+            </span>
             <div class="lightBoxContainer">
                <lightbox :images="imgs[flat_name]" :toDisplay="4"/>
             </div>
-           <div class="description">
-                <div class="infos">
-                    <div class="left">
-                        <span class="title">Description</span>
-                        <p class="txtContainer">
-                            <span>Batiment C second floor</span>
-                            <span>Elevator <icon icon="times"/></span>
-                            <span>Rooms: 2<br>1 canap-lit<br>1 lit double</span>
-                            <span>bathroom: 1</span>
-                            <span>Splited WC: <icon icon="check"/></span>
-                            <span>Surface: 27m</span>
-                        </p><br>
-                        <span class="title">Include</span>
-                        <p class="txtContainer">
-                            <span>Draps and serviettes <icon icon="check"/></span>
-                            <span>Internet <icon icon="check"/></span>
-                            <span>Free phone <icon icon="check"/></span>
-                            <span>Electricity <icon icon="check"/></span>
-                            <span>Habitation assurance <icon icon="check"/></span>
-                        </p>
-                    </div>
-                    <div class="right">
-                        <span class="title">Equipements</span>
-                        <p class="txtContainer">
-                            <span>Lave-vaisselle<icon icon="check"/></span>
-                            <span>Sèche-linge <icon icon="check"/></span>
-                            <span>TV <icon icon="check"/></span>
-                            <span>Lave-linge <icon icon="check"/></span>
-                            <span>Canapé lit <icon icon="check"/></span>
-                            <span>Sèche-cheveux <icon icon="check"/></span>
-                            <span>Fer a repasser <icon icon="check"/></span>
-                            <span>Micro-ondes<icon icon="check"/></span>
-                            <span>Fer a repasser <icon icon="check"/></span>
-                            <span>Four <icon icon="check"/></span>
-                            <span>Aspirateur <icon icon="check"/></span>
-                        </p>
-                    </div>
-                </div>
-               <div class="imgContainer">
-                    <img class="map" src="../../public/localisation.png">
-                </div>
-            </div>
+            <description :info="infos[flat_name]"/>
         </div>
     </div>
 </template>
 
 <script>
-import lightbox from "@/components/lightbox.vue";
+import lightbox from "@/components/lightbox";
+import description from "@/components/description";
 
 const imgs = {
     'Aramis': [
@@ -101,11 +64,11 @@ const imgs = {
         },
         {
             src: '/C4/C4_LIVINGROOM_2.jpeg',
-            print: '/C4/C4_TERASSE_2.jpeg',
+            print: '/C4/C4_TERRASSE_2.jpeg',
         },
         {
             src: '/C4/C4_LIVINGROOM_3.jpeg',
-            print: '/C4/C4_BEDROOM_4.jpeg',
+            print: '/C4/C4_CORRIDOR_4.jpeg',
         },
         {
             src: '/C4/C4_CORRIDOR_2.jpeg',
@@ -195,7 +158,7 @@ const imgs = {
             src: '/B4/B4_KITCHEN_2.jpeg',
         },
         {
-            src: '/B4/B4_KITCHEN_3.jpeg', //
+            src: '/B4/B4_KITCHEN_3.jpeg',
         },
         {
             src: '/B4/B4_KITCHEN_4.jpeg',
@@ -260,6 +223,93 @@ const imgs = {
     ]
 }
 
+const infos = {
+    'Aramis': {
+        building: 'C',
+        elevator: false,
+        room: 2,
+        people: 2,
+        bedroom: 1,
+        bathroom: 1,
+        surface: 30,
+        terrace: false,
+        sep_WC: 1,
+        equipement: [
+            'Double bed',
+            'Oven',
+            'TV',
+            'Microwave',
+            'Internet',
+            'Dishwasher',
+            'Wifi',
+            'Dryer Washer',
+            'Iron',
+            'Refrigerator',
+            'Hair dryer',
+            'Vacuum cleaner',
+            'Toaster',
+        ]
+    },
+    'D\'Artagnan': {
+        building: 'C',
+        elevator: false,
+        room: 3,
+        people: 5,
+        bedroom: 2,
+        bathroom: 2,
+        surface: 84,
+        terrace: true,
+        sep_WC: 1,
+        equipement: [
+            'Queen bed: 1',
+            'Oven',
+            'Single bed: 2',
+            'Refrigerator',
+            'Double bed: 1',
+            'Microwave',
+            'TV',
+            'Dishwasher',
+            'Internet',
+            'Dryer Washer',
+            'Wifi',
+            'Toaster',
+            'Vacuum cleaner',
+            'Iron',
+            'Air conditioner',
+            'Hair dryer',
+        ]
+    },
+    'AtHome': {
+        building: 'B',
+        elevator: false,
+        room: 3,
+        people: 5,
+        bedroom: 2,
+        bathroom: 2,
+        surface: 87,
+        terrace: true,
+        sep_WC: 1,
+        equipement: [
+            'Queen bed: 1',
+            'Oven',
+            'Single bed: 2',
+            'Refrigerator',
+            'Double bed: 1',
+            'Microwave',
+            'TV',
+            'Dishwasher',
+            'Internet',
+            'Dryer Washer',
+            'Wifi',
+            'Toaster',
+            'Vacuum cleaner',
+            'Iron',
+            'Air conditioner',
+            'Hair dryer',
+        ]
+    }
+}
+
 export default {
     name: "flat",
     props: [
@@ -267,11 +317,13 @@ export default {
     ],
     data () {
         return {
-        imgs
+        imgs,
+        infos
         }
     },
     components: {
-        lightbox
+        lightbox,
+        description,
     },
     methods:  {
         resetScroll(){
@@ -313,85 +365,9 @@ export default {
     }
 }
 
-.description {
-    width: 100%;
-    max-width: 1312px;
-    align-self: center;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 16px;
-   .infos {
-        padding: 6px;
-        width: 50%;
-        display: flex;
-        text-align: left;
-        justify-content: space-between;
-        .right {
-            margin-left: 9px;
-        }
-        .txtContainer {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    .imgContainer {
-        width: 50%;
-        min-width: 400px;
-        display: flex;
-        justify-content: flex-end;
-        .map {
-            width: 400px;
-            height: auto;
-            object-fit: contain;
-        }
-    }
-}
-
-.title {
-    z-index: 0;
-    text-align: center;
-    background-color: #24292e;
-    color: white;
-    display: block;
-    clip-path: polygon(0 100%, 10% 0, 100% 0, 90% 100%)
-}
-
-span {
-    font-size: 1.1rem;
-}
-
 @media screen and (max-width: 1353px) {
     .lightBoxContainer {
         max-width: 95vw;
-    }
-}
-
-@media screen and (max-width: 831px) {
-    .imgContainer {
-        min-width: 300px !important;
-    }
-    .map {
-        width: 300px !important;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .description  {
-        justify-content: center;
-    }
-    .map {
-        width: 200px !important;
-    }
-    .imgContainer {
-        min-width: 200px !important;
-        justify-content: center !important;
-    }
-    .infos {
-        width: 100% !important;
-    }
-    span {
-        font-size: 0.9rem;
     }
 }
 
