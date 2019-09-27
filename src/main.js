@@ -12,10 +12,12 @@ import {
   faArrowLeft,
   faCheck,
   faTimes,
+  faChevronLeft,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faRocket, faArrowRight, faArrowLeft, faCheck, faTimes);
+library.add(faRocket, faArrowRight, faArrowLeft, faCheck, faTimes, faChevronLeft, faChevronRight);
 Vue.component("icon", FontAwesomeIcon);
 
 Vue.use(VueLazyLoad)
