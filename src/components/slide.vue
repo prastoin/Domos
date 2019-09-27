@@ -43,7 +43,7 @@ export default {
 .root {
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 16px; 
+    padding: 6px; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -55,8 +55,8 @@ export default {
     margin: 32px;
     flex: wrap;
     display: flex;
-    width: 380px;
-    height: 230px;
+    width: 360px;
+    height: 210px;
     position: relative;
     #txtContainer {
         position: relative;
