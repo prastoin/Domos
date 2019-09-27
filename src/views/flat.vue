@@ -212,13 +212,13 @@ const imgs = {
             src: '/B4/B4_CORRIDOR_3.jpeg',
         },
         {
-            src: '/B4/B4_TERASSE_1.jpeg',
+            src: '/B4/B4_TERRASSE_1.jpeg',
         },
         {
-            src: '/B4/B4_TERASSE_3.jpeg',
+            src: '/B4/B4_TERRASSE_3.jpeg',
         },
         {
-            src: '/B4/B4_TERASSE_2.jpeg',
+            src: '/B4/B4_TERRASSE_2.jpeg',
         },
     ]
 }

@@ -1,5 +1,6 @@
 <template>
     <div id="galerie" style="position: relative;">
+      <router-link :to="'/flat/' + name[index]">
         <transition-group
         :name="rlStatus"
         @after-leave="animate = false"
@@ -12,12 +13,27 @@
             :key="image"
             v-show="i === index"/>
         </transition-group>
+      </router-link>
+        <transition-group
+        name="popIn"
+        tag="div"
+        class="reference">
+            <span v-for="(name, n) in name"
+            :key="name"
+            v-show="index === n">
+              {{ name }}
+            </span>
+        </transition-group>
         <div 
         @click="clickDeal(1)" 
-        class="button right">&gt;</div>
+        class="button right">
+          <icon icon="chevron-right"/>
+        </div>
         <div 
         @click="clickDeal(0)" 
-        class="button left">&lt;</div>
+        class="button left">
+          <icon icon="chevron-left"/>
+        </div>
         <div class="navBar">
         <button
         :class="{active: n === index}"
@@ -48,6 +64,7 @@ export default {
             intervalID: null,
             timeOutID: null,
             pause: false,
+            name: ['Aramis', 'D\'Artagnan', 'AtHome'],
         }
     },
     methods: {
@@ -132,7 +149,7 @@ export default {
 
 .galerie {
     position: relative;
-    height: 570px;
+    height: 560px;
     width: 100%;
     overflow: hidden;
 }
@@ -144,6 +161,24 @@ img {
     width: 100%;
     height: 100%;
     object-fit: fill;
+}
+
+.reference {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  z-index: 99;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.8)));
+  color: white;
+  padding: 3px;
+  border-radius: 10px;
+  
+  display: flex;
+  overflow-x: hidden;
+  span {
+  
+    font-size: 1.2rem;
+  }
 }
 
 .button {
@@ -186,6 +221,15 @@ img {
   animation: slideOutLeft 1.5s;
 }
 
+.popIn-enter-active {
+  animation: popIn 1.5s;
+}
+
+.popIn-leave-active {
+  position: absolute;
+  animation: popOut 0.5s;
+}
+
 @keyframes slideInRight {
   from { transform: translateX(100%); }
   to { transform: translateX(0); }
@@ -204,6 +248,16 @@ img {
 @keyframes slideOutLeft {
   from { transform: translateX(0); }
   to { transform: translateX(100%); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 @media screen and (max-width: 831px) {
